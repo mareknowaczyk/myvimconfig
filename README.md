@@ -14,9 +14,10 @@ My configs and snippets for VIM
    
 * my snippets for:
    * jekyll
-      *highlight shortcuts
+     * highlight shortcuts
    * python
-      *pyramid app snippets (views, models)
+
+     * pyramid app snippets (views, models)
         
 
 ## Requirements ##
