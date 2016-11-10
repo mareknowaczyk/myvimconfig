@@ -1,0 +1,52 @@
+# python pyramid alchemy snippets
+
+snippet	Model "new model class"
+class ${1:ModelName}(Base):
+	__tablename__ = '${2:table_name}'
+	id = Column(Integer, primary_key= True)
+	name = Column(Text)	
+	value = Column(Integer)
+	$0
+
+Index('${3:`_index}', $1.name, unique=True, mysql_length=255)	
+endsnippet
+
+snippet index
+Index('${1:`_index}', $2.name, unique=True, mysql_length=255)
+$0
+endsnippet
+
+snippet column
+${1:column_name} = Column(${2:Text})
+$0
+endsnippet
+
+snippet primarykey
+id = Column(integer, primary_key = True)
+$0
+endsnippet
+
+snippet viewclass
+class $1Views(object):
+  def __init__(self, request):
+    self.request = request 
+
+  $0
+endsnippet
+
+snippet viewm
+@view_config(route_name='$1', renderer='$2:templates/$3.pt')
+def show_$1(self):            
+  return { }
+endsnippet
+
+snippet viewc
+@view_config(route_name='$1', renderer='$2:templates/$3.pi)
+endsnippet
+
+snippet viewmjson
+@view_config(route_name='$1', renderer='json')
+def get_$1( self ):
+  return {}
+endsnippet
+
