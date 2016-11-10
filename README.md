@@ -16,7 +16,6 @@ My configs and snippets for VIM
    * jekyll
      * highlight shortcuts
    * python
-
      * pyramid app snippets (views, models)
         
 
